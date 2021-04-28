@@ -2,16 +2,18 @@ package main
 
 import (
 	"fmt"
-	 "os"
+	"os"
+	
 )
 
 func main() {
 	file,_ := os.Stat("network.go")
 	fl := fmt.Println
-	fl("File name:",file.Name())
+	fl("File Name:",file.Name())
 	fl("File in bytes:",file.Size())
 	fl("File name:",file.ModTime())
 	fl("File name:",file.IsDir())
+	
 	
 	ff := fmt.Printf
 	ff("Perminssion 9-bit:%s\n",file.Mode())
